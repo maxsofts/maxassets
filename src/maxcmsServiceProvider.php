@@ -4,6 +4,7 @@ namespace maxsofts\maxcms;
 
 use Illuminate\Support\ServiceProvider;
 
+
 class maxcmsServiceProvider extends ServiceProvider
 {
     /**
@@ -50,15 +51,25 @@ class maxcmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/migrations' => database_path('/migrations')
         ], 'migrations');
+
+        /**
+         * Add config
+         *
+         * @vn: Công khai thư mục migrations mới ( chuyển thư mục migrations sang thư mục mới để load database)
+         */
+        $this->publishes([
+            __DIR__ . '/config' => config_path()
+        ], 'config');
     }
 
     /**
-     * Register any package services.
+     * Register the service provider.
      *
      * @return void
      */
     public function register()
     {
-        //
+        $this->app->bind('Modules', 'Modules' );
     }
+
 }
