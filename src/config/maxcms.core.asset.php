@@ -9,7 +9,7 @@ return [
      |this return asset admin
      |
      */
-    'maxcms_asset_css_admin' => [
+    'maxcms_asset_css' => [
         'max-css-custom' => '/themes/maxcms/admin/css/custom.css',
         'max-css-jquery' => '/themes/maxcms/admin/css/maps/jquery-jvectormap-2.0.3.css',
     ],
@@ -22,7 +22,7 @@ return [
     |this return asset admin
     |
     */
-    'maxcms_asset_js_admin' => [
+    'maxcms_asset_js' => [
         'max-css-custom' => '/themes/maxcms/admin/js/custom.js',
     ],
     /*

@@ -2,35 +2,37 @@
 namespace maxsofts\maxcms\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests;
-use maxsofts\maxcms\Modules\Assets\Assets;
+use maxsofts\maxcms\Modules\Assets\MaxcmsAssets;
 
 class MaxAdminController extends Controller
 {
+    public $styles;
+    public $scripts;
+
+    public function __construct()
+    {
+        $config = config('maxcms.core.asset');
+
+        $asset = new MaxcmsAssets();
+
+        $asset->initAssetsConfig($config);
+
+        $asset->setCss("test","path");
+
+        $this->styles = $asset->getStyles();
+        $this->scripts = $asset->getScripts();
+    }
+
     public function index()
     {
-        $value = config('maxcms.core.asset');
 
-        $asset = new Assets();
-
-
-        $asset->setMultiCss($value['maxcms_asset_require_css']);
-
-        $asset->setMultiJs($value['maxcms_asset_require_js']);
-
-        $asset->setMultiJs($value['maxcms_asset_js_admin']);
-
-        $asset->setMultiCss($value['maxcms_asset_css_admin']);
-        $data = [
-            'css' => $asset->getCss(),
-            'js' => $asset->getJs()
-        ];
         /**
          * Sample asset
          */
-        return view('maxcms::admin')->with("data",$data);
+        return view('maxcms::admin')
+            ->with('styles',$this->styles)
+            ->with('scripts',$this->scripts);
     }
 }
