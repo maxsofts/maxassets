@@ -41,7 +41,7 @@ class maxcmsServiceProvider extends ServiceProvider
          * Publishes themes
          */
         $this->publishes([
-            __DIR__ . '/themes' => base_path('public/themes/maxcms')
+            __DIR__ . '/themes' => public_path('themes/maxcms')
         ]);
         /**
          * Add Router from packager load

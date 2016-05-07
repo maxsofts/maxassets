@@ -9,14 +9,8 @@
 
     <title>Gentallela Alela! | </title>
 
-
-    @foreach($data['css'] as $key => $value)
-
-        <link href="{{$value}}" rel="stylesheet">
-
-    @endforeach
+    {!!  $styles !!}
 </head>
-
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
@@ -637,10 +631,6 @@
     </div>
 </div>
 
-@foreach($data['js'] as $key => $value)
-
-    <script src="{{$value}}"></script>
-
-@endforeach
+{!!  $scripts !!}
 </body>
 </html>
