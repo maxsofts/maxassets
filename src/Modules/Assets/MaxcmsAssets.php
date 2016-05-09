@@ -2,7 +2,7 @@
 
 namespace maxsofts\maxcms\Modules\Assets;
 
-use maxsofts\maxcms\Modules\Helper\ArrayHelper;
+use maxsofts\maxcms\Modules\Helpers\ArrayHelper;
 
 class MaxcmsAssets extends Assets
 {

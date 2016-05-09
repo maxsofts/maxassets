@@ -1,6 +1,6 @@
 <?php
 
-namespace maxsofts\maxcms\Modules\Helper;
+namespace maxsofts\maxcms\Modules\Helpers;
 
 class ArrayHelper{
 

@@ -16,10 +16,33 @@ and add from composer.json
  ```
  
  add this from config/app.php
- 
+
+ On Proveders Add new class
  ```php
- maxsofts\maxcms\maxcmsServiceProvider::class,
+ 'providers' => [
+     /**
+     *
+     * Add new class
+     *
+     */
+    maxsofts\maxcms\maxcmsServiceProvider::class,
+
+ ]
  ```
+
+ and Add this helper
+
+ ```php
+ 'aliases' => [
+    /**
+    *
+    * Add new class
+    *
+    */
+    'MaxRender' => \maxsofts\maxcms\Modules\Helpers\MaxRender::class,
+    ]
+ ```
+
 ## Usage
 
 ``` php

@@ -3,7 +3,7 @@
 namespace maxsofts\maxcms;
 
 use Illuminate\Support\ServiceProvider;
-
+use maxsofts\maxcms\Modules\Helper\MaxRender;
 
 class maxcmsServiceProvider extends ServiceProvider
 {
@@ -60,6 +60,7 @@ class maxcmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config' => config_path()
         ], 'config');
+
     }
 
     /**
@@ -70,6 +71,7 @@ class maxcmsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('Modules', 'Modules' );
+
     }
 
 }

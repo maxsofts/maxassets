@@ -1,28 +1,26 @@
 <?php
 namespace maxsofts\maxcms\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use maxsofts\maxcms\Modules\Assets\MaxcmsAssets;
+use Illuminate\Support\Facades\Auth;
 
 class MaxAdminController extends Controller
 {
-    public $styles;
-    public $scripts;
 
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
-        $config = config('maxcms.core.asset');
+        var_dump(Auth::check());die();
+        if (Auth::check()) {
 
-        $asset = new MaxcmsAssets();
+        }
+        //$this->middleware('auth');
 
-        $asset->initAssetsConfig($config);
-
-        $asset->setCss("test","path");
-
-        $this->styles = $asset->getStyles();
-        $this->scripts = $asset->getScripts();
     }
 
     public function index()
@@ -31,8 +29,6 @@ class MaxAdminController extends Controller
         /**
          * Sample asset
          */
-        return view('maxcms::admin')
-            ->with('styles',$this->styles)
-            ->with('scripts',$this->scripts);
+        return view('maxcms::admin');
     }
 }

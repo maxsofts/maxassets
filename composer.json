@@ -26,7 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-            "maxsofts\\maxcms\\": "src"
+            "maxsofts\\maxcms\\": "src",
+            "App\\":"src/Modules/Helper/MaxRender"
         }
     },
     "autoload-dev": {

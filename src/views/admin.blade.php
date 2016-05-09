@@ -9,7 +9,7 @@
 
     <title>Gentallela Alela! | </title>
 
-    {!!  $styles !!}
+    {!! MaxRender::renderStyles(config('maxcms.core.asset')) !!}
 </head>
 <body class="nav-md">
 <div class="container body">
@@ -631,6 +631,6 @@
     </div>
 </div>
 
-{!!  $scripts !!}
+{!! MaxRender::renderScripts(config('maxcms.core.asset')) !!}
 </body>
 </html>
