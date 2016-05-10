@@ -4,7 +4,7 @@ namespace maxsofts\maxassets;
 
 use Illuminate\Support\ServiceProvider;
 
-class MaxassetsServiceProvider extends ServiceProvider
+class MaxAssetsServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
