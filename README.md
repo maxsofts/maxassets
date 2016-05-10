@@ -25,7 +25,7 @@ and add from composer.json
      * Add new class
      *
      */
-    maxsofts\maxassets\maxcmsServiceProvider::class,
+    maxsofts\maxassets\MaxAssetsServiceProvider::class,
 
  ]
  ```

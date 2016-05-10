@@ -3,9 +3,8 @@
 namespace maxsofts\maxassets;
 
 use Illuminate\Support\ServiceProvider;
-use maxsofts\maxcms\Modules\Helper\MaxRender;
 
-class MaxAssetsServiceProvider extends ServiceProvider
+class MaxassetsServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.

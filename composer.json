@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "maxsofts\\maxcms\\": "src"
+            "maxsofts\\maxassets\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "maxsofts\\maxcms\\": "tests"
+            "maxsofts\\maxassets\\": "tests"
         }
     }
 }
