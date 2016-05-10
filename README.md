@@ -10,7 +10,7 @@ and add from composer.json
 "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/maxsofts/module-assets"
+            "url": "https://github.com/maxsofts/maxassets"
         }
     ],
  ```
