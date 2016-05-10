@@ -1,6 +1,6 @@
 <?php
 
-namespace maxsofts\maxcms\Modules\Contracts\Assets;
+namespace maxsofts\maxassets\Modules\Contracts\Assets;
 
 
 abstract class AssetsBase{

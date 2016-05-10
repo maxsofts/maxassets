@@ -1,8 +1,8 @@
 <?php
 
-namespace maxsofts\maxcms\Modules\Assets;
+namespace maxsofts\maxassets\Modules\Assets;
 
-use maxsofts\maxcms\Modules\Contracts\Assets\AssetsBase;
+use maxsofts\maxassets\Modules\Contracts\Assets\AssetsBase;
 
 class Assets extends AssetsBase
 {

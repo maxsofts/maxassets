@@ -1,8 +1,8 @@
 <?php
 
-namespace maxsofts\maxcms\Modules\Helpers;
+namespace maxsofts\maxassets\Modules\Helpers;
 
-use maxsofts\maxcms\Modules\Assets\MaxcmsAssets;
+use maxsofts\maxassets\Modules\Assets\MaxcmsAssets;
 
 class MaxRender{
 

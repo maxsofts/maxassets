@@ -1,12 +1,12 @@
 {
-    "name": "maxsofts/maxcms",
+    "name": "maxsofts/maxassets",
     "type": "library",
     "description": ":This is my example for packager laravel",
     "keywords": [
         "maxsofts",
-        "maxcms"
+        "maxassets"
     ],
-    "homepage": "https://github.com/maxsofts/maxcms",
+    "homepage": "https://github.com/maxsofts/module-asset",
     "license": "MIT",
     "authors": [
         {
@@ -26,8 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "maxsofts\\maxcms\\": "src",
-            "App\\":"src/Modules/Helper/MaxRender"
+            "maxsofts\\maxcms\\": "src"
         }
     },
     "autoload-dev": {

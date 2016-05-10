@@ -2,7 +2,7 @@
 
 ## Install
 
-`"maxsofts/maxcms" : "0.1.*"`
+`"maxsofts/maxassets" : "0.1.*"`
 
 and add from composer.json
 
@@ -10,7 +10,7 @@ and add from composer.json
 "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/maxsofts/maxcms"
+            "url": "https://github.com/maxsofts/module-assets"
         }
     ],
  ```
@@ -25,7 +25,7 @@ and add from composer.json
      * Add new class
      *
      */
-    maxsofts\maxcms\maxcmsServiceProvider::class,
+    maxsofts\maxassets\maxcmsServiceProvider::class,
 
  ]
  ```
@@ -39,13 +39,22 @@ and add from composer.json
     * Add new class
     *
     */
-    'MaxRender' => \maxsofts\maxcms\Modules\Helpers\MaxRender::class,
+    'MaxRender' => \maxsofts\maxassets\Modules\Helpers\MaxRender::class,
     ]
  ```
 
 ## Usage
 
+Render From ```php<head></head>``` or end ```php <body></body>```
+
 ``` php
-php artisan vendor:publish
-php artisan migrate
+/**
+* Render Style on Config file
+*/
+{!! MaxRender::renderStyles(config('maxcms.core.asset')) !!}
+
+/**
+* Render Scripts on Config file
+*/
+{!! MaxRender::renderScripts(config('maxcms.core.asset')) !!}
 ```

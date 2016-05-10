@@ -1,8 +1,8 @@
 <?php
 
-namespace maxsofts\maxcms\Modules\Assets;
+namespace maxsofts\maxassets\Modules\Assets;
 
-use maxsofts\maxcms\Modules\Helpers\ArrayHelper;
+use maxsofts\maxassets\Modules\Helpers\ArrayHelper;
 
 class MaxcmsAssets extends Assets
 {
