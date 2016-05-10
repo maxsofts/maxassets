@@ -15,11 +15,12 @@ class MaxAdminController extends Controller
      */
     public function __construct()
     {
-        var_dump(Auth::check());die();
+
         if (Auth::check()) {
 
         }
-        //$this->middleware('auth');
+        
+        $this->middleware('auth');
 
     }
 

@@ -61,6 +61,9 @@ class maxcmsServiceProvider extends ServiceProvider
             __DIR__ . '/config' => config_path()
         ], 'config');
 
+
+        var_dump($this->app['auth']);die();
+        $this->app['auth'];
     }
 
     /**

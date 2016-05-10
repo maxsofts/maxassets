@@ -6,4 +6,6 @@ Route::group(['as' => 'admin::'], function () {
     }]);
 });
 
+Route::auth();
+
 Route::get(Config::get('maxcms.core.config.backend'),'MaxAdminController@index');
