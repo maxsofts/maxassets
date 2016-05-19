@@ -71,7 +71,7 @@ class MaxcmsAssets extends Assets
         $styles = "\n";
 
         foreach ($css as $key => $value) {
-            $styles .= "<link rel='stylesheet' id='$key'  href='$value' type='text/css' media='all' />\n";
+            $styles .= "<link rel='stylesheet' id='$key'  href='".Request::root()."/".$value."' type='text/css' media='all' />\n";
         }
 
         $this->styles .= $styles;
@@ -88,7 +88,7 @@ class MaxcmsAssets extends Assets
         $scripts = "\n";
 
         foreach ($js as $key => $value) {
-            $scripts .= "<script type='text/javascript' src='$value'></script>\n";
+            $scripts .= "<script type='text/javascript' src='".Request::root()."/".$value."'></script>\n";
         }
 
         $this->scripts .= $scripts;
