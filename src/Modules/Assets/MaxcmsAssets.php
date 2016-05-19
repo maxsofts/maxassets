@@ -2,6 +2,7 @@
 
 namespace maxsofts\maxassets\Modules\Assets;
 
+use Illuminate\Support\Facades\URL;
 use maxsofts\maxassets\Modules\Helpers\ArrayHelper;
 
 class MaxcmsAssets extends Assets
@@ -69,9 +70,8 @@ class MaxcmsAssets extends Assets
     public function setStyles($css)
     {
         $styles = "\n";
-
         foreach ($css as $key => $value) {
-            $styles .= "<link rel='stylesheet' id='$key'  href='".Request::root()."/".$value."' type='text/css' media='all' />\n";
+            $styles .= "<link rel='stylesheet' id='$key'  href='".URL::to("/")."/".$value."' type='text/css' media='all' />\n";
         }
 
         $this->styles .= $styles;
@@ -88,7 +88,7 @@ class MaxcmsAssets extends Assets
         $scripts = "\n";
 
         foreach ($js as $key => $value) {
-            $scripts .= "<script type='text/javascript' src='".Request::root()."/".$value."'></script>\n";
+            $scripts .= "<script type='text/javascript' src='".URL::to("/")."/".$value."'></script>\n";
         }
 
         $this->scripts .= $scripts;
